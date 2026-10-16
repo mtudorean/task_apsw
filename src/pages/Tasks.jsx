@@ -26,7 +26,7 @@ export default function Tasks() {
     const query = search.toLowerCase()
     const matchesSearch = (task.title || '').toLowerCase().includes(query) || (task.assignee || '').toLowerCase().includes(query)
     const matchesStatus = status === 'All status' || task.status === status
-    const matchesPriority = priority === 'All priorities' || task.priority === priority
+    const matchesPriority = priority === 'All priority' || task.priority === priority
     return matchesSearch && matchesStatus && matchesPriority
   }), [tasks, search, status, priority])
 
